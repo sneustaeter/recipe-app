@@ -11,6 +11,9 @@ public class Recipe {
     public String name = "";
     public String description = "";
     public String[] ingredients;
+    /*The tags array will hold many single word/short phrase tags used to search and index
+    the recipes*/
+    public String[] tags;
     
     //Empty constructor, dont use me
     public Recipe(){
@@ -46,5 +49,25 @@ public class Recipe {
     }
     public void setIngredients(String[] ingredientsIn){
         ingredients = ingredientsIn;
+    }
+    
+    
+    public String[] getTags(){
+        return tags;
+    }
+    public void setTags(String[] tagsIn){
+        tags = tagsIn;
+    }
+    
+    
+    
+    //toString method for making human readable String output
+    @Override
+    public String toString(){
+        
+        String outStr = "Name: " + name;
+        outStr += "\n\tDescription: " + description;
+        //FINISH ME
+        return outStr;
     }
 }
