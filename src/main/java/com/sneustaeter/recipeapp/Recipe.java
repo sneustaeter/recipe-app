@@ -11,6 +11,7 @@ public class Recipe {
     public String name = "";
     public String description = "";
     public String[] ingredients;
+    public String[] steps;
     /*The tags array will hold many single word/short phrase tags used to search and index
     the recipes*/
     public String[] tags;
@@ -21,10 +22,11 @@ public class Recipe {
     }
     
     //Constructor that takes in basic recipe information
-    public Recipe(String nameIn, String descriptionIn, String[] ingredientsIn){
+    public Recipe(String nameIn, String descriptionIn, String[] ingredientsIn, String[] stepsIn){
         name = nameIn;
         description = descriptionIn;
         ingredients = ingredientsIn;
+        steps = stepsIn;
     }
     
     
@@ -49,6 +51,14 @@ public class Recipe {
     }
     public void setIngredients(String[] ingredientsIn){
         ingredients = ingredientsIn;
+    }
+    
+    
+    public String[] getSteps(){
+        return steps;
+    }
+    public void setSteps(String[] stepsIn){
+        steps = stepsIn;
     }
     
     
